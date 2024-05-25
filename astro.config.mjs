@@ -5,6 +5,5 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://albarino-pt.github.io',
-	integrations: [mdx(), sitemap()],
+	site: 'https://albarino-pt.github.io'
 });
