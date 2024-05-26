@@ -10,24 +10,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="bg-zinc-900">
     <Header />
     <main>
       <header class="text-center mt-36 mb-48">
-        <h1 class="text-5xl font-bold text-gray-900">🌐 Albarino</h1>
-        <p class="text-xl text-gray-700 mt-4">
+        <h1 class="text-5xl font-bold text-gray-200">🌐 Albarino</h1>
+        <p class="text-xl text-gray-300 mt-4">
           O Seu Parceiro em Desenvolvimento Web Personalizado
         </p>
       </header>
 
-      <section class="bg-gray-100 py-12">
+      <section
+        class="bg-zinc-900 bg-opacity-50 backdrop-blur-lg py-12 mx-4 rounded-lg shadow-lg"
+      >
         <div class="container mx-auto px-6">
           <div class="flex flex-wrap">
             <div class="w-full md:w-1/2 p-4">
-              <h2 class="text-3xl font-semibold text-gray-800 mb-4">
-                Quem Somos
-              </h2>
-              <p class="text-gray-700 leading-relaxed">
+              <h2 class="text-3xl font-semibold text-white mb-4">Quem Somos</h2>
+              <p class="text-zinc-400 leading-relaxed">
                 Na Albarino, transformamos ideias em experiências digitais
                 excecionais. Com uma equipa dedicada e apaixonada pelo
                 desenvolvimento web, criamos soluções personalizadas que
@@ -45,18 +45,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </div>
       </section>
 
-      <section class="py-12">
+      <section class="py-48">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+          <h2 class="text-3xl font-semibold text-white mb-4">
             Os Nossos Serviços
           </h2>
           <div class="flex flex-wrap justify-center">
             <div class="w-full md:w-1/3 p-4">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              <div
+                class="bg-zinc-900 bg-opacity-50 backdrop-blur-lg p-6 rounded-lg shadow-lg"
+              >
+                <h3 class="text-xl font-semibold text-white mb-2">
                   Desenvolvimento Web
                 </h3>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-zinc-400 leading-relaxed">
                   Sites personalizados que combinam design elegante com
                   desempenho otimizado, garantindo uma experiência de utilizador
                   excecional.
@@ -64,22 +66,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
               </div>
             </div>
             <div class="w-full md:w-1/3 p-4">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              <div
+                class="bg-zinc-900 bg-opacity-50 backdrop-blur-sm p-6 rounded-lg shadow-lg"
+              >
+                <h3 class="text-xl font-semibold text-white mb-2">
                   E-commerce
                 </h3>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-zinc-400 leading-relaxed">
                   Soluções de e-commerce robustas que facilitam a gestão de
                   vendas online e melhoram a satisfação do cliente.
                 </p>
               </div>
             </div>
             <div class="w-full md:w-1/3 p-4">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              <div
+                class="bg-zinc-900 bg-opacity-50 backdrop-blur-sm p-6 rounded-lg shadow-lg"
+              >
+                <h3 class="text-xl font-semibold text-white mb-2">
                   Aplicações Web
                 </h3>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-zinc-400 leading-relaxed">
                   Aplicações web dinâmicas e seguras, desenhadas para escalar e
                   adaptarem-se às suas necessidades específicas.
                 </p>
@@ -89,40 +95,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </div>
       </section>
 
-      <section class="bg-gray-100 py-12">
+      <section
+        class="bg-zinc-900 bg-opacity-50 backdrop-blur-sm py-12 mx-4 rounded-lg shadow-lg"
+      >
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+          <h2 class="text-3xl font-semibold text-zinc-100 mb-4">
             Porquê Escolher a Albarino?
           </h2>
           <div class="flex flex-wrap justify-center">
             <div class="w-full md:w-1/3 p-4">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              <div class="bg-zinc-900 bg-opacity-50 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-zinc-100 mb-2">
                   Expertise
                 </h3>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-zinc-500 leading-relaxed">
                   Anos de experiência na criação de soluções web personalizadas
                   para várias indústrias.
                 </p>
               </div>
             </div>
             <div class="w-full md:w-1/3 p-4">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              <div class="bg-zinc-800 bg-opacity-50 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-zinc-100 mb-2">
                   Inovação
                 </h3>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-zinc-500 leading-relaxed">
                   Utilizamos as tecnologias mais recentes para garantir que o
                   seu projeto está na vanguarda digital.
                 </p>
               </div>
             </div>
             <div class="w-full md:w-1/3 p-4">
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              <div class="bg-zinc-900 bg-opacity-50 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-zinc-100 mb-2">
                   Suporte Dedicado
                 </h3>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-zinc-500 leading-relaxed">
                   Suporte contínuo para assegurar que o seu site ou aplicação
                   web funciona perfeitamente após o lançamento.
                 </p>
@@ -132,19 +140,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </div>
       </section>
 
-      <section class="py-12">
+      <section class="py-24">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+          <h2 class="text-3xl font-semibold text-zinc-100 mb-4">
             Contacte-nos
           </h2>
-          <p class="text-gray-700 leading-relaxed mb-8">
+          <p class="text-zinc-400 leading-relaxed mb-8 max-w-xl mx-auto">
             Pronto para elevar o seu projeto ao próximo nível? Fale connosco
             hoje para discutir as suas necessidades e iniciar a sua jornada com
             a Albarino.
           </p>
           <a
             href="/contact"
-            class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg"
+            class="bg-red-700 text-white px-6 py-3 rounded-lg shadow-lg"
           >
             Fale Connosco
           </a>
