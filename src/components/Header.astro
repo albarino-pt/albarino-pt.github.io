@@ -1,32 +1,35 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
-<header class="p-5 sticky top-0">
-	<nav class="navbar bg-gray-200 bg-opacity-75 backdrop-blur-sm rounded-xl">
-		<div class="navbar-start">
-			<div class="dropdown">
-			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-				<a href="/">{SITE_TITLE}</a>
-			</div>
-			<ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-				<HeaderLink href="/">Home</HeaderLink>
-				<HeaderLink href="/blog">Blog</HeaderLink>
-				<HeaderLink href="/about">About</HeaderLink>
-			</ul>
-			</div>
-			<a class="btn btn-ghost text-xl">Albarino</a>
-		</div>
-		<div class="navbar-center hidden lg:flex">
-			<ul class="menu menu-horizontal px-1">
-				<HeaderLink class="px-2 text-black" href="/">Home</HeaderLink>
-				<HeaderLink class="px-2 text-black" href="/blog">Blog</HeaderLink>
-				<HeaderLink class="px-2 text-black" href="/about">About</HeaderLink>
-			</ul>
-		</div>
-		<div class="navbar-end">
-			<a class="btn">Contacta-nos</a>
-		</div>
-	</nav>
+<header class="p-5 sticky top-0 z-50">
+  <nav class="navbar bg-zinc-700 bg-opacity-75 backdrop-blur-sm rounded-xl">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <a href="/">{SITE_TITLE}</a>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <HeaderLink href="/">Home</HeaderLink>
+          <HeaderLink href="/blog">Blog</HeaderLink>
+          <HeaderLink href="/about">About</HeaderLink>
+        </ul>
+      </div>
+      <a class="btn btn-ghost text-xl">Albarino</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <HeaderLink class="px-2 text-black" href="/">Home</HeaderLink>
+        <HeaderLink class="px-2 text-black" href="/blog">Blog</HeaderLink>
+        <HeaderLink class="px-2 text-black" href="/about">About</HeaderLink>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn text-white">Contacta-nos</a>
+    </div>
+  </nav>
 </header>
