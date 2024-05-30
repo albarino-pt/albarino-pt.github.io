@@ -7,19 +7,31 @@ import { SITE_TITLE } from "../consts";
   <nav class="navbar bg-zinc-700 bg-opacity-75 backdrop-blur-sm rounded-xl">
     <div class="navbar-start">
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <a href="/">{SITE_TITLE}</a>
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-xl">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path>
+          </svg>
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-opacity-75 backdrop-blur-sm bg-base-100 rounded-box w-52"
         >
           <HeaderLink href="/">Home</HeaderLink>
           <HeaderLink href="/blog">Blog</HeaderLink>
           <HeaderLink href="/about">About</HeaderLink>
         </ul>
       </div>
-      <a class="btn btn-ghost text-xl">Albarino</a>
+      <a class="btn btn-ghost text-xl" href="/">Albarino</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
@@ -29,7 +41,7 @@ import { SITE_TITLE } from "../consts";
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn text-white">Contacta-nos</a>
+      <a class="btn text-white" href="/contact">Contacta-nos</a>
     </div>
   </nav>
 </header>

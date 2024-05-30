@@ -1,0 +1,80 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-zinc-900">
+    <Header />
+    <main>
+      <section
+        class="bg-zinc-900 bg-opacity-50 backdrop-blur-lg py-12 mt-18 mb-24 mx-4 rounded-lg shadow-lg"
+      >
+        <div class="container mx-auto px-6">
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2 p-4 place-content-center">
+              <h2 class="text-3xl font-semibold text-white mb-4">
+                Quer ser contactado?
+              </h2>
+              <p class="text-zinc-400 leading-relaxed">
+                Deixe nos aqui a sua informação! iremos entrar em contacto
+                consigo o mais breve possivel!
+              </p>
+              <a
+                href="https://vzpjsql4ss1.typeform.com/to/X55KU0ZC"
+                class="bg-red-700 hover:bg-red-800 transition-all text-white px-6 py-3 rounded-lg shadow-lg"
+              >
+                Quero!
+              </a>
+            </div>
+            <div class="w-full md:w-1/2 h-64">
+              <img
+                src="https://images.unsplash.com/photo-1587560699334-bea93391dcef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Sobre Nós"
+                class="rounded-lg shadow-lg h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-zinc-900 bg-opacity-50 backdrop-blur-lg py-12 mt-18 mb-24 mx-4 rounded-lg shadow-lg"
+      >
+        <div class="container mx-auto px-6">
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2 h-64">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Sobre Nós"
+                class="rounded-lg shadow-lg h-full w-full object-cover"
+              />
+            </div>
+            <div class="w-full md:w-1/2 p-4 place-content-center">
+              <h2 class="text-3xl font-semibold text-white mb-4">
+                Entre en contacto connosco!
+              </h2>
+              <p class="text-zinc-400 leading-relaxed">
+                Pode entrar em contacto connosco! Escolha o sitio onde prefere
+                ser contactado!
+              </p>
+              <a
+                href="http://link.albarino.pt"
+                class="bg-red-700 hover:bg-red-800 transition-all text-white px-6 py-3 rounded-lg shadow-lg"
+              >
+                Links
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
