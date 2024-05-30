@@ -51,6 +51,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       .last-updated-on {
         font-style: italic;
       }
+      .slot {
+        background-color: rgba(44, 44, 44, 0.65);
+        padding: 1em;
+        border-radius: 0.5em;
+      }
     </style>
   </head>
 
@@ -65,7 +70,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             )
           }
         </div>
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-5xl mx-auto slot">
           <div class="title">
             <div class="date">
               <FormattedDate date={pubDate} />
