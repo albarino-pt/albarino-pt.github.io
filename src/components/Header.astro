@@ -4,7 +4,9 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header class="p-5 sticky top-0 z-50">
-  <nav class="navbar bg-zinc-700 bg-opacity-75 backdrop-blur-sm rounded-xl">
+  <nav
+    class="navbar bg-zinc-900 bg-opacity-75 ring-2 ring-zinc-700/75 backdrop-blur-sm rounded-xl"
+  >
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-xl">
@@ -24,24 +26,46 @@ import { SITE_TITLE } from "../consts";
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-opacity-75 backdrop-blur-sm bg-base-100 rounded-box w-52"
+          class="menu menu-sm dropdown-content mt-3 z-[1] py-3 px-5 space-y-2 shadow bg-opacity-75 backdrop-blur-sm bg-base-100 rounded-box w-52"
         >
-          <HeaderLink href="/">Home</HeaderLink>
-          <HeaderLink href="/blog">Blog</HeaderLink>
-          <HeaderLink href="/about">About</HeaderLink>
+          <HeaderLink
+            href="/"
+            class="bg-zinc-700 hover:bg-zinc-800 bg-opacity-50 hover:bg-opacity-70 transition-all text-white px-6 py-3 rounded-lg shadow-lg"
+            >Início</HeaderLink
+          >
+          <HeaderLink
+            href="/blog"
+            class="bg-zinc-700 hover:bg-zinc-800 bg-opacity-50 hover:bg-opacity-70 transition-all text-white px-6 py-3 rounded-lg shadow-lg"
+            >Blog</HeaderLink
+          >
+          <!-- <HeaderLink
+            href="/projects"
+            class="bg-zinc-700 hover:bg-zinc-800 bg-opacity-50 hover:bg-opacity-70 transition-all text-white px-6 py-3 rounded-lg shadow-lg"
+            >Pojetos</HeaderLink
+      >-->
+          <HeaderLink
+            href="/about"
+            class="bg-zinc-700 hover:bg-zinc-800 bg-opacity-50 hover:bg-opacity-70 transition-all text-white px-6 py-3 rounded-lg shadow-lg"
+            >Sobre</HeaderLink
+          >
         </ul>
       </div>
       <a class="btn btn-ghost text-xl" href="/">Albarino</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <HeaderLink class="px-2 text-black" href="/">Home</HeaderLink>
+        <HeaderLink class="px-2 text-black" href="/">Início</HeaderLink>
         <HeaderLink class="px-2 text-black" href="/blog">Blog</HeaderLink>
-        <HeaderLink class="px-2 text-black" href="/about">About</HeaderLink>
+        <!--<HeaderLink class="px-2 text-black" href="/projects"
+          >Projetos</HeaderLink
+        >-->
+        <HeaderLink class="px-2 text-black" href="/about">Sobre</HeaderLink>
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn text-white" href="/contact">Contacta-nos</a>
+      <a class="btn text-white hover:ring-2 ring-red-700/75" href="/contact"
+        >Contacta-nos</a
+      >
     </div>
   </nav>
 </header>
