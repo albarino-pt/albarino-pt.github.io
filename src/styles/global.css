@@ -33,6 +33,41 @@ body {
 
 }
 
+@keyframes glowred {
+  0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.7), 
+                  0 0 30px rgba(255, 0, 0, 0.7), 
+                  0 0 45px rgba(255, 0, 0, 0.7);
+  }
+  50% {
+      box-shadow: 0 0 20px rgba(255, 0, 0, 1), 
+                  0 0 40px rgba(255, 0, 0, 1), 
+                  0 0 60px rgba(255, 0, 0, 1);
+  }
+}
+
+.glow-red {
+  animation: glowred 2s infinite alternate;
+}
+
+@keyframes glowgreen {
+  0%, 100% {
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.7), 
+                  0 0 30px rgba(0, 255, 0, 0.7), 
+                  0 0 45px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+      box-shadow: 0 0 20px rgba(0, 255, 0, 1), 
+                  0 0 40px rgba(0, 255, 0, 1), 
+                  0 0 60px rgba(0, 255, 0, 1);
+  }
+}
+
+.glow-green {
+  animation: glowgreen 2s infinite alternate;
+}
+
+
 main {
   max-width: calc(100% - 2em);
   margin: auto;
