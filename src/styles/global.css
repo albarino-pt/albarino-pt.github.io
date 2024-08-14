@@ -67,7 +67,6 @@ body {
   animation: glowgreen 2s infinite alternate;
 }
 
-
 main {
   max-width: calc(100% - 2em);
   margin: auto;
