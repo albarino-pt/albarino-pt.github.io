@@ -13,6 +13,7 @@
 	
 	"devDependencies": {
 		"@astrojs/mdx": "^0.10.0",
+		"@astrojs/sitemap": "^0.10.0",
 		"@astrojs/check": "^0.6.0",
 		"@astrojs/tailwind": "^5.1.0",
 		"@biomejs/biome": "1.7.3",
