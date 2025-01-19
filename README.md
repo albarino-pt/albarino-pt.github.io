@@ -2,7 +2,7 @@
 
 ![Hero Image](/assets/images/posts/about.png)
 
-### Hi friend!
+## Hi friend!
 
 Welcome to  my internet conner.<br>
 I decided to create this website to solve 2 "situations".
