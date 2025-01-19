@@ -1,0 +1,37 @@
+[
+	{
+		"dates": "21 - 23 June, 2019", 
+		"role": "Team Captain",
+		"company": "European RoboCupJunior Championship 2019  - Hannover, Germany",
+		"description": "Rescue Maze",
+		"logo": "/assets/images/experiences/FER2019.png"
+	},
+	{
+		"dates": "24 - 28 April, 2019", 
+		"role": "Team Captain",
+		"company": "Festival Nacional de Robótica 2019 - Gondomar, Portugal",
+		"description": "Rescue Maze",
+		"logo": "/assets/images/experiences/FNR2019.png"
+	},
+	{
+		"dates": "2018", 
+		"role": "Competitor",
+		"company": "Municipal Entrepreneurship Competition - Figueira da Foz",
+		"description": "Rescue Rover Project",
+		"logo": "/assets/images/experiences/CMIN.png"
+	},
+	{
+		"dates": "29 May - 1 June, 2018",
+		"role": "Team Captain",
+		"company": "European RoboCupJunior Championship 2018 - Montesilvano, Italy",
+		"description": "Rescue Maze",
+		"logo": "/assets/images/experiences/FER2018.png"
+	},
+	{
+		"dates": "25 - 29 April, 2018",
+		"role": "Team Captain",
+		"company": "Festival Nacional de Robótica 2018 - Torres Vedras, Portugal",
+		"description": "Rescue Maze",
+		"logo": "/assets/images/experiences/FNR2018.png"
+	}
+]

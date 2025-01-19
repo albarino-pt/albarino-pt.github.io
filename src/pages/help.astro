@@ -1,0 +1,33 @@
+---
+import helplinks from "../collections/helplinks.json";
+import PageHeading from "../components/page-heading.astro";
+import Project from "../components/project.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="Help links">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Help links"
+      description="Here are some links you may find helpfull. If you are in need of some support hit me up on my socials."
+    />
+
+    <div
+      class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
+    >
+      {
+        helplinks.map((helplinks) => {
+          return (
+            <Project
+              name={helplinks.name}
+              description={helplinks.description}
+              image={helplinks.image}
+              alt={helplinks.alt}
+              url={helplinks.url}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>

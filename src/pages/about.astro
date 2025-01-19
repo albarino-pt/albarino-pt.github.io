@@ -1,50 +1,69 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+import experiences from "../collections/experiences.json";
+import AboutExperience from "../components/about-experience.astro";
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
 ---
 
-<Layout
-  title="Sobre nós"
-  description="Quem somos, de onde viemos e para onde vamos."
-  pubDate={new Date("May 29 2024")}
-  heroImage="https://images.unsplash.com/photo-1616584110443-3a96a5750968?q=80&w=1920&h=1080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Db"
->
-  <h3>Quem somos</h3>
-  <p>
-    A Albarino é uma agência web inovadora e especializada que se destaca por
-    sua abordagem técnica e personalizada. Nossa equipa de profissionais,
-    liderados por tecnólogos, desenvolve soluções digitais que atendem às
-    necessidades específicas dos nossos clientes.
-  </p>
+<Layout title="About Me">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="About Me"
+      description="Hello 👋 I'm a maker from Coimbra, Portugal. I'm love making new projects and learning new skills."
+    />
 
-  <h3>A nossa visão</h3>
-  <p>
-    A nossa visão é fornecer soluções digitais de alta qualidade que ajudem os
-    nossos clientes a alcançar seus objetivos. Estamos comprometidos em oferecer
-    serviços personalizados, transparência e comunicação aberta.
-  </p>
+    <img
+      src="/assets/images/about.png"
+      class="relative z-30 w-full my-10 rounded-xl"
+      style="height: auto;"
+    />
 
-  <h3>Os nossos serviços</h3>
-  <p>
-    Oferecemos uma ampla gama de serviços, incluindo desenvolvimento web,
-    transformação digital, manutenção e suporte especializado, consultoria em
-    inteligência artificial, arquitetura de software e desenvolvimento de
-    software.
-  </p>
+    <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Short Bio</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      Learning from trial and error. Teaching my self new skills every day.
+    </p>
 
-  <h3>A nossa equipa</h3>
-  <p>
-    A nossa equipa é composta por profissionais experientes em áreas como
-    front-end, mobile, back-end, arquitetura, DevOps, SecOps e UX/UI. Estamos
-    comprometidos em fornecer soluções de alta qualidade e atendimento
-    personalizado.
-  </p>
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Experience
+    </h2>
+    <div class="px-5 py-10">
+      {
+        experiences.map((experience) => {
+          return (
+            <div class="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
+              <AboutExperience
+                dates={experience.dates}
+                role={experience.role}
+                company={experience.company}
+                description={experience.description}
+                logo={experience.logo}
+              />
+            </div>
+          );
+        })
+      }
+    </div>
 
-  <h3>Os nossos valores</h3>
-  <p>
-    Valor: Focamos no valor, não no preço. Nunca terá um estagiário a fazer
-    experiências no seu produto. Comunicação: Transparência brutal. Só desta
-    forma somos ágeis. Inovação: Tecnologia de ponta. Não se deixe limitar por
-    um Wordpress ou um Shopify. Ambição: Se é possível imaginar, é possível
-    executar.
-  </p>
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Let's Connect!
+    </h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      If you want to stay up to date with my work be sure to <a
+        href="https://www.instagram.com/the_kanlord"
+        target="_blank"
+        class="text-neutral-300 underline">follow me on instagram</a
+      >, or you can send me an <a
+        href="mailto:descobrir@albarino.pt"
+        class="text-neutral-300 underline">email</a
+      > and I'll be sure to get back to you.
+    </p>
+  </section>
 </Layout>

@@ -1,0 +1,33 @@
+---
+import socials from "../collections/socials.json";
+import PageHeading from "../components/page-heading.astro";
+import Project from "../components/project.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="My Socials">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="My Socials"
+      description="Here are most of my accounts.. No I don't use them all but I figure its safer if you know what they are."
+    />
+
+    <div
+      class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
+    >
+      {
+        socials.map((socials) => {
+          return (
+            <Project
+              name={socials.name}
+              description={socials.description}
+              image={socials.image}
+              alt={socials.alt}
+              url={socials.url}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>

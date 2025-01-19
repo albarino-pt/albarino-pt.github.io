@@ -1,0 +1,66 @@
+---
+const footerId = "footer"; // Ensure your footer has this ID
+---
+
+<style>
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 40;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .floating-button:hover {
+    transform: scale(1.1);
+  }
+
+  .floating-button:active {
+    transform: scale(0.9);
+  }
+</style>
+
+<div class="floating-button" id="floatingButton" title="Support me">
+  <script
+    type="text/javascript"
+    src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"></script>
+  <script type="text/javascript">
+    kofiwidget2.init("Support me on Ko-fi", "#171717", "the_kanlord");
+    kofiwidget2.draw();
+  </script>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const floatingButton = document.getElementById("floatingButton");
+    const footer = document.getElementById("footer");
+    const observerOptions = {
+      root: null, // Observe the viewport
+      threshold: 0, // Trigger as soon as any part of the footer is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Footer is visible, position the button above the footer
+          const footerHeight = footer.getBoundingClientRect().height;
+          console.log(`${footerHeight + 20}px`);
+          floatingButton.style.position = "fixed";
+          floatingButton.style.bottom = `${footerHeight + 20}px`;
+        } else {
+          // Footer is not visible, keep the button fixed
+          floatingButton.style.position = "fixed";
+          floatingButton.style.bottom = "20px";
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(footer);
+  });
+</script>
