@@ -2,42 +2,42 @@
 	{
 		"name": "Instagram",
 		"description": "Sometimes I share photos.",
-		"image": "/assets/images/socials/instagram.jpg",
+		"image": "/assets/images/socials/instagram.webp",
 		"alt": "Instagram",
 		"url": "https://www.instagram.com/the_kanlord"
 	},
 	{
 		"name": "𝕏 (formerly twitter)",
 		"description": "(Pick my brain here)",
-		"image": "/assets/images/socials/twitter.jpg",
+		"image": "/assets/images/socials/twitter.webp",
 		"alt": "𝕏 (formerly twitter)",
 		"url": "https://x.com/the_kanlord"
 	},
 	{
 		"name": "Facebook",
 		"description": "Who still uses facebook?",
-		"image": "/assets/images/socials/facebook.jpg",
+		"image": "/assets/images/socials/facebook.webp",
 		"alt": "Facebook",
 		"url": "https://www.facebook.com/TheKanLord/"
 	},
 	{
 		"name": "Snapchat",
 		"description": "What am I doing?",
-		"image": "/assets/images/socials/snapchat.jpg",
+		"image": "/assets/images/socials/snapchat.webp",
 		"alt": "Snapchat",
 		"url": "https://www.snapchat.com/add/kanlord"
 	},
 	{
 		"name": "LinkedIn",
 		"description": "My professional side.",
-		"image": "/assets/images/socials/linkedin.png",
+		"image": "/assets/images/socials/linkedin.webp",
 		"alt": "LinkedIn",
 		"url": "https://www.linkedin.com/in/francisco-albarino/"
 	},
 	{
 		"name": "Github",
 		"description": "Don't forget to \"CTRL+S\"",
-		"image": "/assets/images/socials/Github.png",
+		"image": "/assets/images/socials/Github.webp",
 		"alt": "Github",
 		"url": "https://github.com/albarino-pt"
 	}
