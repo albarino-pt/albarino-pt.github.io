@@ -13,4 +13,11 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Content />
+<Content class="post-content" />
+
+<style>
+  .post-content img {
+    border-radius: 5px; /* Change this value to adjust roundness */
+    color: red;
+  }
+</style>
