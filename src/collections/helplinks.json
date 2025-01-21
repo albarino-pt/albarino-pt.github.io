@@ -2,21 +2,21 @@
 	{
 		"name": "TeamViewer",
 		"description": "The Remote Connectivity Software",
-		"image": "/assets/images/helplinks/teamviewer.png",
+		"image": "/assets/images/helplinks/teamviewer.webp",
         "alt": "TeamViewer — The Remote Connectivity Software",
 		"url": "https://teamviewer.com/pt/download/windows/"
 	},
 	{
 		"name": "Anydesk",
 		"description": "The Fast Remote Desktop Application",
-		"image": "/assets/images/helplinks/anydesk.png",
+		"image": "/assets/images/helplinks/anydesk.webp",
         "alt": "AnyDesk: The Fast Remote Desktop Application",
 		"url": "https://anydesk.com/pt/downloads/windows"
 	},
 	{
 		"name": "Ninite",
 		"description": "Install and Update All Your Programs at Once",
-		"image": "/assets/images/helplinks/ninite.png",
+		"image": "/assets/images/helplinks/ninite.webp",
         "alt": "Ninite — Install and Update All Your Programs at Once",
 		"url": "https://ninite.com/"
 	}
