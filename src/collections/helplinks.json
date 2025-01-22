@@ -14,10 +14,24 @@
 		"url": "https://anydesk.com/pt/downloads/windows"
 	},
 	{
+		"name": "TightVNC",
+		"description": "VNC-Compatible Free Remote Desktop Software",
+		"image": "/assets/images/helplinks/tightvnc.webp",
+        "alt": "TightVNC — VNC-Compatible Free Remote Desktop Software",
+		"url": "https://www.tightvnc.com/download.php"
+	},
+	{
 		"name": "Ninite",
 		"description": "Install and Update All Your Programs at Once",
 		"image": "/assets/images/helplinks/ninite.webp",
         "alt": "Ninite — Install and Update All Your Programs at Once",
 		"url": "https://ninite.com/"
+	},
+	{
+		"name": "Advanced IP Scanner",
+		"description": "Scan a network in seconds",
+		"image": "/assets/images/helplinks/IP Scanner.webp",
+        "alt": "Advanced IP Scanner — Scan a network in seconds",
+		"url": "https://www.advanced-ip-scanner.com/"
 	}
 ]

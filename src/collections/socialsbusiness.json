@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Instagram",
+		"description": "I share project photos.",
+		"image": "/assets/images/socials/instagram-albarino.webp",
+		"alt": "Instagram",
+		"url": "https://www.instagram.com/albarino.pt"
+	},
+	{
+		"name": "𝕏 (formerly twitter)",
+		"description": "(Pick my brain here)",
+		"image": "/assets/images/socials/twitter-albarino.webp",
+		"alt": "𝕏 (formerly twitter)",
+		"url": "https://x.com/albarino_pt"
+	},
+	{
+		"name": "Facebook",
+		"description": "Another way to see me projects.",
+		"image": "/assets/images/socials/facebook-albarino.webp",
+		"alt": "Facebook",
+		"url": "https://www.facebook.com/profile.php?id=61560484057174"
+	},
+	{
+		"name": "Email",
+		"description": "You can always reach out with an email.",
+		"image": "/assets/images/socials/email.webp",
+		"alt": "Email",
+		"url": "mailto:descobrir@albarino.pt"
+	}
+]
