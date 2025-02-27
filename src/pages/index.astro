@@ -100,16 +100,23 @@ const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
             >
               <span
                 class="flex items-center justify-center w-full h-full bg-white border border-dashed rounded-full dark:bg-neutral-950 border-neutral-300 dark:border-neutral-700"
-                >🤖</span
-              >
+                >🤖
+              </span>
             </span>
           </div>
           <div class="relative z-30">
             <img
-              src="/assets/images/profilepic2.png"
+              src="/assets/images/profilepic1.png"
               loading="eager"
               decoding="auto"
-              class="relative rounded-2xl z-30 w-full md:max-w-md mx-auto dark:-translate-y-0.5"
+              class="relative rounded-2xl z-30 w-full md:max-w-md mx-auto dark:-translate-y-0.5 hidden dark:block"
+              alt="Profile"
+            />
+            <img
+              src="/assets/images/profilepic3.png"
+              loading="eager"
+              decoding="auto"
+              class="relative rounded-2xl z-30 w-full md:max-w-md mx-auto dark:-translate-y-0.5 block dark:hidden"
               alt="Profile"
             />
           </div>
