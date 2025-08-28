@@ -1,0 +1,40 @@
+---
+import experiences from "../collections/experiences.json";
+import AboutExperience from "../components/about-experience.astro";
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="Lost and found">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Lost and found"
+      description="soo.. you have probably found an item with an QR code that brought you here"
+    />
+
+    <!-- <img
+      src="/assets/images/about.webp"
+      alt="Profile picture of me (Francisco Albarino)"
+      class="relative z-30 w-full my-10 rounded-xl"
+      style="height: auto;"
+    /> -->
+
+    <h2 class="my-3 text-xl font-bold dark:text-neutral-200">What now?</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+        sPlease reach out to me as soon as possible through one of my <a
+        href="/socials"
+        class="text-neutral-300 underline">socials</a
+      >. I really appreciate you taking the time to help me get my stuff back. .
+    </p>
+
+    <p
+      class="mt-5 text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      (And yeah… I usually try not to lose things 😅)
+    </p>
+
+    
+  </section>
+</Layout>
