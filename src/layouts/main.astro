@@ -31,13 +31,16 @@ const { title } = Astro.props;
     </style>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.svg" />
     <script src="../assets/css/main.css"></script>
-    
+
     <!-- Umami Analytics -->
-    <script defer src="https://umami.albarinolab.pt/script.js" data-website-id="4e4c2619-f7eb-416f-bb87-8dab2a80ae2a"></script>
-    
+    <script
+      defer
+      src="https://umami.albarinolab.pt/script.js"
+      data-website-id="e6d8a00f-dd39-40d6-8c35-aea0d9e8b166"></script>
+
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
-  
+
   <body class="antialiased bg-white dark:bg-neutral-950">
     <SquareLines />
     <Header />
@@ -50,11 +53,13 @@ const { title } = Astro.props;
 
 <script>
   (() => {
-    const ls = localStorage.getItem('dark_mode');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const ls = localStorage.getItem("dark_mode");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
 
-    if (ls === 'true' || (ls === null && prefersDark)) {
-      document.documentElement.classList.add('dark');
+    if (ls === "true" || (ls === null && prefersDark)) {
+      document.documentElement.classList.add("dark");
     }
   })();
 </script>
