@@ -8,6 +8,10 @@
 		"url": "/projects"
 	},
 	{
+		"name": "Portfolio",
+		"url": "/portfolio"
+	},
+	{
 		
 		"name": "Updates",
 		"url": "/updates"
