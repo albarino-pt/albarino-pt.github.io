@@ -2,26 +2,32 @@
 import Button from "../button.astro";
 
 import PostsLoop from "../projects-loop.astro";
-import Project from "../project.astro";
+
+const {
+  heading = "My Projects",
+  description = "Here are some of my recent projects. Keep an eye out for the next one. (I'm always working on something new!)",
+  prefix,
+  link = "/projects",
+  buttonText = "View All My Projects",
+} = Astro.props;
 ---
 
 <section class="max-w-4xl mx-auto px-7 lg:px-0">
   <h2
     class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
-    My Projects
+    {heading}
   </h2>
   <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
-    Here are some of my recent projects. Keep an eye out for the next one. (I'm
-    always working on something new!)
+    {description}
   </p>
   <div
     class="grid items-stretch w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-7"
   >
-    {(<PostsLoop count="3" />)}
+    {(<PostsLoop count="3" prefix={prefix} />)}
   </div>
 
   <div class="flex items-center justify-center w-full py-5">
-    <Button text="View All My Projects" link="/projects" />
+    <Button text={buttonText} link={link} />
   </div>
 </section>

@@ -123,7 +123,21 @@ const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
   </div>
 
   <Separator text="Check out my projects" />
-  <Projects />
+  <Projects
+    heading="My Projects"
+    description="Here are some of my recent hardware/electronics projects. Keep an eye out for the next one. (I'm always working on something new!)"
+    prefix="a"
+    link="/projects"
+    buttonText="View All My Projects"
+  />
+  <Separator text="Check out my portfolio" />
+  <Projects
+    heading="Portfolio"
+    description="Web development work: full-stack apps, business sites and client platforms."
+    prefix="w"
+    link="/portfolio"
+    buttonText="View My Full Portfolio"
+  />
   <Separator text="Some of my updates" />
   <Updates />
 </Layout>
