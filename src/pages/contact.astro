@@ -1,0 +1,107 @@
+---
+export const prerender = true;
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="Contact">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Get in Touch"
+      description="Have a project in mind, a question, or just want to say hi? Send me a message below."
+    />
+
+    <form
+      id="contact-form"
+      class="mt-10 space-y-5"
+      method="POST"
+      action="/api/contact"
+    >
+      <div>
+        <label for="name" class="block mb-1 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full px-4 py-2 text-sm border rounded-lg border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-1 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-4 py-2 text-sm border rounded-lg border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block mb-1 text-sm font-medium text-neutral-700 dark:text-neutral-300">
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="w-full px-4 py-2 text-sm border rounded-lg resize-none border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-neutral-100"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="inline-flex w-full items-center justify-center px-4 py-2.5 text-xs font-semibold duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Send Message
+      </button>
+
+      <p id="contact-status" class="text-sm text-center text-neutral-500 dark:text-neutral-400"></p>
+    </form>
+
+    <p class="mt-10 text-sm text-center text-neutral-500 dark:text-neutral-400">
+      Prefer email? Reach me directly at
+      <a href="mailto:descobrir@albarino.pt" class="underline text-neutral-900 dark:text-neutral-100">
+        descobrir@albarino.pt
+      </a>
+    </p>
+  </section>
+
+  <script>
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const status = document.getElementById("contact-status") as HTMLParagraphElement;
+
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      status.textContent = "Sending...";
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        if (res.ok) {
+          status.textContent = "Message sent! I'll get back to you soon.";
+          form.reset();
+        } else {
+          const data = await res.json().catch(() => ({}));
+          status.textContent = data.error || "Something went wrong. Please try again or email me directly.";
+        }
+      } catch {
+        status.textContent = "Something went wrong. Please try again or email me directly.";
+      }
+    });
+  </script>
+</Layout>

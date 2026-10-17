@@ -6,7 +6,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,16 +32,16 @@ const { title } = Astro.props;
     <link rel="icon" type="image/x-icon" href="../assets/favicon.svg" />
     <script src="../assets/css/main.css"></script>
 
-    <!-- Umami Analytics -->
+    <!-- Plausible Analytics -->
     <script
       defer
-      src="https://umami.albarinolab.pt/script.js"
-      data-website-id="e6d8a00f-dd39-40d6-8c35-aea0d9e8b166"></script>
+      data-domain="albarino.pt"
+      src="https://analytics.albarinolab.pt/js/script.js"></script>
 
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
 
-  <body class="antialiased bg-white dark:bg-neutral-950">
+  <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
     <SquareLines />
     <Header />
     <slot />

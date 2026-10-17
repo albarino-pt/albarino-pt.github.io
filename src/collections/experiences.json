@@ -1,37 +1,58 @@
 [
 	{
-		"dates": "21 - 23 June, 2019", 
+		"dates": "2020 — Present",
+		"role": "Firefighter & Emergency Responder",
+		"company": "Bombeiros Voluntários — Coimbra, Portugal",
+		"description": "Active volunteer firefighter. Medical emergency response, fire suppression, technical rescue.",
+		"category": "emergency",
+		"icon": "🔥"
+	},
+	{
+		"dates": "2020 — Present",
+		"role": "Maker & Independent Developer",
+		"company": "Albarino Lab — Self-employed",
+		"description": "Building electronics projects, custom PCBs, Arduino-based systems, and web solutions for clients and personal R&D.",
+		"category": "maker",
+		"icon": "🛠️"
+	},
+	{
+		"dates": "21 - 23 June, 2019",
 		"role": "Team Captain",
-		"company": "European RoboCupJunior Championship 2019  - Hannover, Germany",
-		"description": "Rescue Maze",
+		"company": "European RoboCupJunior Championship 2019 — Hannover, Germany",
+		"description": "Rescue Maze. Represented Portugal at the European championship with a custom-built autonomous rescue robot.",
+		"category": "robotics",
 		"logo": "/assets/images/experiences/FER2019.webp"
 	},
 	{
-		"dates": "24 - 28 April, 2019", 
+		"dates": "24 - 28 April, 2019",
 		"role": "Team Captain",
-		"company": "Festival Nacional de Robótica 2019 - Gondomar, Portugal",
-		"description": "Rescue Maze",
+		"company": "Festival Nacional de Robótica 2019 — Gondomar, Portugal",
+		"description": "Rescue Maze. National qualifier for the European championship.",
+		"category": "robotics",
 		"logo": "/assets/images/experiences/FNR2019.webp"
 	},
 	{
-		"dates": "2018", 
+		"dates": "2018",
 		"role": "Competitor",
-		"company": "Municipal Entrepreneurship Competition - Figueira da Foz",
-		"description": "Rescue Rover Project",
+		"company": "Municipal Entrepreneurship Competition — Figueira da Foz",
+		"description": "Rescue Rover Project. Pitched an autonomous rover concept to a panel of judges.",
+		"category": "robotics",
 		"logo": "/assets/images/experiences/CMIN.webp"
 	},
 	{
 		"dates": "29 May - 1 June, 2018",
 		"role": "Team Captain",
-		"company": "European RoboCupJunior Championship 2018 - Montesilvano, Italy",
-		"description": "Rescue Maze",
+		"company": "European RoboCupJunior Championship 2018 — Montesilvano, Italy",
+		"description": "Rescue Maze. First international competition, built the full robot system from scratch.",
+		"category": "robotics",
 		"logo": "/assets/images/experiences/FER2018.webp"
 	},
 	{
 		"dates": "25 - 29 April, 2018",
 		"role": "Team Captain",
-		"company": "Festival Nacional de Robótica 2018 - Torres Vedras, Portugal",
-		"description": "Rescue Maze",
+		"company": "Festival Nacional de Robótica 2018 — Torres Vedras, Portugal",
+		"description": "Rescue Maze.",
+		"category": "robotics",
 		"logo": "/assets/images/experiences/FNR2018.webp"
 	}
 ]

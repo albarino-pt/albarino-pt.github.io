@@ -1,15 +1,28 @@
 ---
+export const prerender = true;
 import experiences from "../collections/experiences.json";
 import AboutExperience from "../components/about-experience.astro";
 import PageHeading from "../components/page-heading.astro";
 import Layout from "../layouts/main.astro";
+
+const skills = {
+  "Web & Software": ["Astro", "Tailwind CSS", "TypeScript", "Node.js", "Linux"],
+  "Electronics & Hardware": ["Arduino", "PCB Design", "KiCad", "Raspberry Pi"],
+  "Tools & Infra": ["Docker", "Git", "Proxmox", "Self-hosting", "Hermes", "Claude"],
+};
+
+const legend = [
+  { label: "Emergency", dot: "bg-red-500" },
+  { label: "Maker", dot: "bg-teal-500" },
+  { label: "Robotics", dot: "bg-neutral-500 dark:bg-neutral-400" },
+];
 ---
 
 <Layout title="About Me">
   <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
       title="About Me"
-      description="Hello 👋 I'm a maker from Coimbra, Portugal. I'm love making new projects and learning new skills."
+      description="Hello 👋 I'm a maker from Coimbra, Portugal. I love building new projects and learning new skills every day."
     />
 
     <img
@@ -23,14 +36,53 @@ import Layout from "../layouts/main.astro";
     <p
       class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
     >
-      Learning from trial and error. Teaching my self new skills every day.
+      Learning from trial and error. Teaching myself new skills every day. I
+      split my time between responding to emergencies as a volunteer
+      firefighter, designing electronics and robotics projects in the
+      workshop, and building software on the web.
     </p>
+
+    <h2
+      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Skills
+    </h2>
+    <div class="space-y-4">
+      {
+        Object.entries(skills).map(([group, items]) => (
+          <div>
+            <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-neutral-400 dark:text-neutral-500">
+              {group}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {items.map((item) => (
+                <span class="px-3 py-1 text-xs font-medium border rounded-full text-neutral-700 dark:text-neutral-300 border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
 
     <h2
       class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
     >
       Experience
     </h2>
+    <div class="flex flex-wrap items-center gap-4 mb-4">
+      {
+        legend.map((item) => (
+          <div class="flex items-center gap-1.5">
+            <span class={`w-2 h-2 rounded-full ${item.dot}`} />
+            <span class="text-xs text-neutral-500 dark:text-neutral-400">
+              {item.label}
+            </span>
+          </div>
+        ))
+      }
+    </div>
     <div class="px-5 py-10">
       {
         experiences.map((experience) => {
@@ -42,6 +94,8 @@ import Layout from "../layouts/main.astro";
                 company={experience.company}
                 description={experience.description}
                 logo={experience.logo}
+                icon={experience.icon}
+                category={experience.category}
               />
             </div>
           );

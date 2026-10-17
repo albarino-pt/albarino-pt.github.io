@@ -8,6 +8,10 @@
 		"url": "/projects"
 	},
 	{
+		"name": "Portfolio",
+		"url": "/portfolio"
+	},
+	{
 		
 		"name": "Updates",
 		"url": "/updates"
@@ -15,6 +19,14 @@
 	{
 		"name": "About",
 		"url": "/about"
+	},
+	{
+		"name": "Home Lab",
+		"url": "/homelab"
+	},
+	{
+		"name": "Contact",
+		"url": "/contact"
 	},
 	{
 		"name": "Socials",
