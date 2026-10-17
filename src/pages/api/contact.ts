@@ -25,6 +25,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
   const CONTACT_EMAIL = import.meta.env.CONTACT_EMAIL;
+  const FROM_EMAIL = import.meta.env.FROM_EMAIL || "Albarino Site <contact@albarino.dev>";
 
   if (!RESEND_API_KEY || !CONTACT_EMAIL) {
     // Email sending is not configured yet (pending domain fix). Fail clearly
@@ -46,7 +47,7 @@ export const POST: APIRoute = async ({ request }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Albarino Site <contact@albarino.pt>",
+        from: FROM_EMAIL,
         to: [CONTACT_EMAIL],
         reply_to: email,
         subject: `New contact form message from ${name}`,
