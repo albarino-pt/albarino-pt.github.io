@@ -21,6 +21,14 @@
 		"url": "/about"
 	},
 	{
+		"name": "Home Lab",
+		"url": "/homelab"
+	},
+	{
+		"name": "Contact",
+		"url": "/contact"
+	},
+	{
 		"name": "Socials",
 		"url": "/socials"
 	}

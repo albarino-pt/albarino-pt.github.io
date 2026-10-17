@@ -1,0 +1,46 @@
+---
+export const prerender = true;
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+
+const stack = [
+  { name: "Proxmox VE", role: "Virtualization host running all my VMs across two physical servers on my home LAN." },
+  { name: "Docker", role: "Containerized services: Supabase, Portainer, Seafile, and this VM's app stack." },
+  { name: "Caddy", role: "Reverse proxy routing traffic to the right app by hostname, inside each VM." },
+  { name: "Cloudflare Tunnel", role: "Exposes services to the internet with automatic HTTPS, no open ports on my router." },
+  { name: "Plausible", role: "Privacy-friendly, self-hosted analytics for this site — no cookies, no tracking." },
+  { name: "PM2", role: "Keeps Node.js apps (like this site) running, auto-restarting on crash or reboot." },
+];
+---
+
+<Layout title="Home Lab">
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+    <PageHeading
+      title="Home Lab"
+      description="A quick look at the self-hosted infrastructure running behind the scenes of this site and my other projects."
+    />
+
+    <p class="mt-8 text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg">
+      I run a small home lab across a couple of Proxmox servers at home, hosting everything from this
+      website to internal tools and experiments. It's a mix of self-hosted services, VMs, and containers
+      — mostly built and maintained for the fun of it, and because I like knowing exactly how my own
+      infrastructure works end to end.
+    </p>
+
+    <h2 class="mt-8 mb-4 text-2xl font-bold dark:text-neutral-200">Stack</h2>
+    <div class="space-y-4">
+      {
+        stack.map((item) => (
+          <div class="pb-4 border-b border-neutral-200 last:border-b-0 dark:border-neutral-700">
+            <p class="font-semibold text-neutral-800 dark:text-neutral-200">{item.name}</p>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">{item.role}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <p class="mt-8 text-xs text-neutral-400 dark:text-neutral-500">
+      Last reviewed: October 2026. This page is updated manually, not pulled from live status.
+    </p>
+  </section>
+</Layout>
